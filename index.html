@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+  <div class="container">
+    <h1>Quote Generator</h1>
+    <p class="mode">Enable Dark Mode</p>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  
+  <div class="category-select">
+    <label class="category" for="categories">Choose a category:</label>
+    <select id="categories">
+      <option class="btn" value="inspirational">Inspirational</option>
+      <option class="btn" value="science">Science</option>
+    </select>
+  </div>
+
+  <div class="quote-display">
+    <p id="quote-text">"This is where the quote will appear."</p>
+    <p id="quote-author">- Author</p>
+  </div>
+
+  <div class="buttons">
+
+    <button class="btn" id="prev-btn">
+      <i class="fas fa-arrow-left"></i> Previous
+    </button>
+
+
+    <button class="btn" id="random-btn">
+      <i class="fas fa-random"></i> Generate Random Quotations
+    </button>
+
+    <!-- Next button with icon -->
+    <button class="btn" id="next-btn">
+      Next <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <div class="font-size">
+
+    <button class="btn" id="increase-font">
+      <i class="fas fa-plus"></i> Increase Font Size
+    </button>
+
+
+    <button class="btn" id="decrease-font">
+      <i class="fas fa-minus"></i> Decrease Font Size
+    </button>
+  </div>
+
+
+  <div id="alert-box" class="alert-box" style="display:none;"></div>
+  <script src="script.js"></script>
 </body>
 </html>
